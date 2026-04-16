@@ -1,0 +1,36 @@
+{
+  "name": "daily-summary",
+  "version": "1.0.0",
+  "description": "每日业务复盘自动总结技能 - 自动分析对话内容，生成结构化复盘报告并写入飞书文档",
+  "author": "Your Name",
+  "license": "MIT",
+  
+  "feishu": {
+    "app_id": "YOUR_FEISHU_APP_ID",
+    "app_secret": "YOUR_FEISHU_APP_SECRET",
+    "document_id": "YOUR_FEISHU_DOCUMENT_ID"
+  },
+  
+  "schedule": {
+    "enabled": true,
+    "cron": "0 20 * * *",
+    "timezone": "Asia/Shanghai"
+  },
+  
+  "output": {
+    "local_backup": true,
+    "send_notification": false,
+    "notification_channel": "infoflow"
+  },
+  
+  "content": {
+    "insert_at_start": true,
+    "include_sections": [
+      "work_overview",
+      "business_insights",
+      "learning_harvest",
+      "workflow_optimization",
+      "tomorrow_plan"
+    ]
+  }
+}
